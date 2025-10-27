@@ -1,284 +1,195 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutina de Entrenamiento - 5 Días</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutina de Entrenamiento</title>
+  <style>
+    :root {
+      --color-fondo: #111;
+      --color-card: #1b1b1b;
+      --color-acento: #e63946;
+      --color-texto: #f1f1f1;
+      --color-boton: #e63946;
+    }
 
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #0a192f;
-            color: #8892b0;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-        header {
-            background-color: #0a192f;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--color-card);
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
 
-        header h1 {
-            color: #64ffda;
-            font-family: 'Merriweather', serif;
-        }
+    header h1 {
+      flex-basis: 100%;
+      text-align: center;
+      margin: 0.5rem 0;
+      color: var(--color-acento);
+      font-size: 1.4rem;
+    }
 
-        main {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
+    nav button {
+      background: var(--color-boton);
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-weight: 600;
+    }
 
-        h2 {
-            color: #64ffda;
-            text-align: center;
-            margin-top: 40px;
-        }
+    nav button:hover {
+      background: #c53030;
+    }
 
-        .day {
-            background-color: #112240;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 0 10px rgba(100, 255, 218, 0.1);
-        }
+    section {
+      background: var(--color-card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
 
-        .day h3 {
-            color: #ccd6f6;
-            text-align: center;
-            font-size: 1.5em;
-        }
+    section h2 {
+      color: var(--color-acento);
+      text-align: center;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
 
-        .exercise {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 1px solid #233554;
-            padding: 10px 0;
-        }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        .exercise:last-child {
-            border: none;
-        }
+    li {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.8rem;
+      margin-bottom: 0.6rem;
+      border-radius: 10px;
+      line-height: 1.5;
+    }
 
-        .exercise img {
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            object-fit: cover;
-            background-color: #233554;
-        }
+    .recomendaciones {
+      background: #181818;
+      border-left: 4px solid var(--color-acento);
+    }
 
-        .exercise-info {
-            flex: 1;
-        }
-
-        .exercise-info h4 {
-            color: #64ffda;
-            margin: 0;
-        }
-
-        .exercise-info p {
-            margin: 5px 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #233554;
-            color: #fff;
-        }
-    </style>
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🏋️‍♂️ Rutina de Entrenamiento 5 Días</h1>
-        <p>Enfocada en fuerza y desarrollo muscular. Pierna 2 veces por semana.</p>
-    </header>
-    <main>
-        <section class="day">
-            <h3>Día 1 - Pecho y Tríceps</h3>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/bench-press-2_0.jpg" alt="Press plano mancuernas">
-                <div class="exercise-info">
-                    <h4>Press plano con mancuernas</h4>
-                    <p>4 series de 8-12 repeticiones</p>
-                    <p>Sube peso cuando logres las 12 reps.</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/incline-dumbbell-press-2_0.jpg" alt="Press inclinado">
-                <div class="exercise-info">
-                    <h4>Press inclinado con mancuernas</h4>
-                    <p>4 series de 8-12 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/push-up_0.jpg" alt="Flexiones">
-                <div class="exercise-info">
-                    <h4>Flexiones</h4>
-                    <p>4 series de 10 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/overhead-dumbbell-extension-2_0.jpg" alt="Press copa">
-                <div class="exercise-info">
-                    <h4>Press copa (tríceps)</h4>
-                    <p>4 series de 12 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/tricep-pushdown-1.jpg" alt="Polea tríceps">
-                <div class="exercise-info">
-                    <h4>Polea para tríceps</h4>
-                    <p>4 series de 12 repeticiones</p>
-                </div>
-            </div>
-        </section>
+  <header>
+    <h1>Rutina de Entrenamiento Semanal</h1>
+    <nav>
+      <button onclick="scrollToSection('lunes')">Lunes</button>
+      <button onclick="scrollToSection('martes')">Martes</button>
+      <button onclick="scrollToSection('miercoles')">Miércoles</button>
+      <button onclick="scrollToSection('jueves')">Jueves</button>
+      <button onclick="scrollToSection('viernes')">Viernes</button>
+      <button onclick="scrollToSection('recomendaciones')">Recomendaciones</button>
+    </nav>
+  </header>
 
-        <section class="day">
-            <h3>Día 2 - Espalda y Bíceps</h3>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/deadlift_0.jpg" alt="Peso muerto">
-                <div class="exercise-info">
-                    <h4>Peso muerto</h4>
-                    <p>4 series de 8 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/pull-up-1_0.jpg" alt="Dominadas pronas">
-                <div class="exercise-info">
-                    <h4>Dominadas pronas</h4>
-                    <p>4 series de 10 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/chin-up-1_0.jpg" alt="Dominadas supinas">
-                <div class="exercise-info">
-                    <h4>Dominadas supinas</h4>
-                    <p>4 series de 10 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/seated-cable-row_0.jpg" alt="Remo en polea">
-                <div class="exercise-info">
-                    <h4>Remo en polea</h4>
-                    <p>4 series de 8 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/barbell-curl-1_0.jpg" alt="Curl bíceps">
-                <div class="exercise-info">
-                    <h4>Curl de bíceps</h4>
-                    <p>5 series de 8 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/dumbbell-hammer-curl-2_0.jpg" alt="Curl martillo">
-                <div class="exercise-info">
-                    <h4>Curl martillo</h4>
-                    <p>5 series de 8 repeticiones</p>
-                </div>
-            </div>
-        </section>
+  <section id="lunes">
+    <h2>Lunes - Pecho / Tríceps</h2>
+    <ul>
+      <li>Press plano con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones.</li>
+      <li>Press inclinado con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones. Menos peso que eso no.</li>
+      <li>Flexiones — 4 series de 10.</li>
+      <li>Press copa — 4 series de 12, no tan pesadas.</li>
+      <li>Polea para tríceps — 4 series de 12.</li>
+    </ul>
+  </section>
 
-        <section class="day">
-            <h3>Día 3 - Pierna</h3>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/squat_1.jpg" alt="Sentadilla">
-                <div class="exercise-info">
-                    <h4>Sentadilla</h4>
-                    <p>4 series de 8 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/leg-press-2_0.jpg" alt="Prensa">
-                <div class="exercise-info">
-                    <h4>Prensa</h4>
-                    <p>4 series de 8 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/hack-squat-1.jpg" alt="Hack">
-                <div class="exercise-info">
-                    <h4>Hack (máquina o barra)</h4>
-                    <p>4 series de 8 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/leg-extension-2_0.jpg" alt="Extensión cuadriceps">
-                <div class="exercise-info">
-                    <h4>Extensión de cuádriceps</h4>
-                    <p>4 series de 10 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/lying-leg-curl_0.jpg" alt="Femoral">
-                <div class="exercise-info">
-                    <h4>Extensión de femoral</h4>
-                    <p>4 series de 10 repeticiones</p>
-                </div>
-            </div>
-        </section>
+  <section id="martes">
+    <h2>Martes - Peso Muerto / Espalda / Bíceps</h2>
+    <ul>
+      <li>Peso muerto — 4 series de 8.</li>
+      <li>Dominadas pronas — 4 series de 10.</li>
+      <li>Dominadas supinas — 4 series de 10.</li>
+      <li>Remo en polea — 4 series de 8.</li>
+      <li>Curl de bíceps — 5 series de 8.</li>
+      <li>Curl de bíceps martillo — 5 series de 8.</li>
+    </ul>
+  </section>
 
-        <section class="day">
-            <h3>Día 4 - Hombros y Core</h3>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/shoulder-press-2_0.jpg" alt="Press militar">
-                <div class="exercise-info">
-                    <h4>Press militar</h4>
-                    <p>4 series de 12 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/dumbbell-lateral-raise-2_0.jpg" alt="Elevaciones laterales">
-                <div class="exercise-info">
-                    <h4>Elevaciones laterales</h4>
-                    <p>4 series de 12 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/plank_1.jpg" alt="Plancha">
-                <div class="exercise-info">
-                    <h4>Plancha</h4>
-                    <p>4 series de 40 segundos</p>
-                </div>
-            </div>
-        </section>
+  <section id="miercoles">
+    <h2>Miércoles - Pierna / Hombro</h2>
+    <ul>
+      <li>Sentadilla — 4 series de 8.</li>
+      <li>Prensa — 4 series de 8.</li>
+      <li>Hacka — 4 series de 8.</li>
+      <li>Extensión de cuádriceps — 4 series de 10.</li>
+      <li>Extensión femoral — 4 series de 10.</li>
+      <li>Press militar — 4 series de 12.</li>
+      <li>Extensiones laterales — 4 series de 12.</li>
+    </ul>
+  </section>
 
-        <section class="day">
-            <h3>Día 5 - Pierna (enfasis glúteo y posterior)</h3>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/hip-thrust-2_0.jpg" alt="Hip thrust">
-                <div class="exercise-info">
-                    <h4>Hip Thrust</h4>
-                    <p>4 series de 10 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/romanian-deadlift-1_0.jpg" alt="Peso muerto rumano">
-                <div class="exercise-info">
-                    <h4>Peso muerto rumano</h4>
-                    <p>4 series de 10 repeticiones</p>
-                </div>
-            </div>
-            <div class="exercise">
-                <img src="https://www.muscleandstrength.com/sites/default/files/lunge-2_0.jpg" alt="Zancadas">
-                <div class="exercise-info">
-                    <h4>Zancadas</h4>
-                    <p>4 series de 10 por pierna</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>💪 Rutina semanal diseñada para fuerza y estética. Recuerda calentar antes de cada sesión.</p>
-    </footer>
+  <section id="jueves">
+    <h2>Jueves - Pecho / Tríceps</h2>
+    <ul>
+      <li>Press plano con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones.</li>
+      <li>Press inclinado con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones. Menos peso que eso no.</li>
+      <li>Flexiones — 4 series de 10.</li>
+      <li>Press copa — 4 series de 12, no tan pesadas.</li>
+      <li>Polea para tríceps — 4 series de 12.</li>
+    </ul>
+  </section>
+
+  <section id="viernes">
+    <h2>Viernes - Peso Muerto / Espalda / Bíceps</h2>
+    <ul>
+      <li>Peso muerto — 4 series de 8.</li>
+      <li>Dominadas pronas — 4 series de 10.</li>
+      <li>Dominadas supinas — 4 series de 10.</li>
+      <li>Remo en polea — 4 series de 8.</li>
+      <li>Curl de bíceps — 5 series de 8.</li>
+      <li>Curl de bíceps martillo — 5 series de 8.</li>
+    </ul>
+  </section>
+
+  <section id="recomendaciones" class="recomendaciones">
+    <h2>Recomendaciones Generales</h2>
+    <ul>
+      <li>En ejercicios de 8 repeticiones, inicia en 8 y progresa hasta 12. Cuando logres las 12, aumenta el peso y vuelve a 8.</li>
+      <li>Realiza siempre un breve calentamiento antes de comenzar: puede ser bicicleta, cuerda o skipping en el lugar.</li>
+      <li>Haz movilidad articular: muñecas, hombros, cadera, brazos y tobillos antes de cada sesión.</li>
+      <li>Enfócate en la técnica correcta y el control del movimiento.</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Rutina Personal de Entrenamiento
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
