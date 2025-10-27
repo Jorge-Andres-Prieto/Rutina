@@ -65,6 +65,7 @@
       padding: 1.5rem;
       margin: 1rem;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      scroll-margin-top: 110px; /* corrige el salto del scroll */
     }
 
     section h2 {
@@ -82,9 +83,21 @@
     li {
       background: rgba(255, 255, 255, 0.05);
       padding: 0.8rem;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
       border-radius: 10px;
       line-height: 1.5;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    li img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--color-acento);
     }
 
     .recomendaciones {
@@ -116,59 +129,59 @@
   <section id="lunes">
     <h2>Lunes - Pecho / Tríceps</h2>
     <ul>
-      <li>Press plano con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones.</li>
-      <li>Press inclinado con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones. Menos peso que eso no.</li>
-      <li>Flexiones — 4 series de 10.</li>
-      <li>Press copa — 4 series de 12, no tan pesadas.</li>
-      <li>Polea para tríceps — 4 series de 12.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2017/08/07/20/50/dumbbell-2607129_1280.jpg" alt="Press plano">Press plano con mancuernas — 4 series de al menos 8 repeticiones.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/dumbbell-1283721_1280.jpg" alt="Press inclinado">Press inclinado con mancuernas — 4 series de al menos 8 repeticiones.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/athlete-1283720_1280.jpg" alt="Flexiones">Flexiones — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/gym-1283723_1280.jpg" alt="Press copa">Press copa — 4 series de 12, no tan pesadas.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2014/04/05/11/40/gym-316883_1280.jpg" alt="Polea triceps">Polea para tríceps — 4 series de 12.</li>
     </ul>
   </section>
 
   <section id="martes">
     <h2>Martes - Peso Muerto / Espalda / Bíceps</h2>
     <ul>
-      <li>Peso muerto — 4 series de 8.</li>
-      <li>Dominadas pronas — 4 series de 10.</li>
-      <li>Dominadas supinas — 4 series de 10.</li>
-      <li>Remo en polea — 4 series de 8.</li>
-      <li>Curl de bíceps — 5 series de 8.</li>
-      <li>Curl de bíceps martillo — 5 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/training-1283726_1280.jpg" alt="Peso muerto">Peso muerto — 4 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2020/03/04/19/54/pull-up-4903184_1280.jpg" alt="Dominadas pronas">Dominadas pronas — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2020/03/04/19/54/pull-up-4903184_1280.jpg" alt="Dominadas supinas">Dominadas supinas — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/muscular-1283722_1280.jpg" alt="Remo en polea">Remo en polea — 4 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/bodybuilder-1283725_1280.jpg" alt="Curl bíceps">Curl de bíceps — 5 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/athlete-1283724_1280.jpg" alt="Martillo bíceps">Curl de bíceps martillo — 5 series de 8.</li>
     </ul>
   </section>
 
   <section id="miercoles">
     <h2>Miércoles - Pierna / Hombro</h2>
     <ul>
-      <li>Sentadilla — 4 series de 8.</li>
-      <li>Prensa — 4 series de 8.</li>
-      <li>Hacka — 4 series de 8.</li>
-      <li>Extensión de cuádriceps — 4 series de 10.</li>
-      <li>Extensión femoral — 4 series de 10.</li>
-      <li>Press militar — 4 series de 12.</li>
-      <li>Extensiones laterales — 4 series de 12.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/11/29/08/27/people-1866756_1280.jpg" alt="Sentadilla">Sentadilla — 4 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/fitness-1283727_1280.jpg" alt="Prensa">Prensa — 4 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/gym-1283728_1280.jpg" alt="Hacka">Hacka — 4 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/fitness-1283729_1280.jpg" alt="Extensión cuádriceps">Extensión de cuádriceps — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/training-1283730_1280.jpg" alt="Extensión femoral">Extensión femoral — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/bodybuilder-1283731_1280.jpg" alt="Press militar">Press militar — 4 series de 12.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/training-1283732_1280.jpg" alt="Extensiones laterales">Extensiones laterales — 4 series de 12.</li>
     </ul>
   </section>
 
   <section id="jueves">
     <h2>Jueves - Pecho / Tríceps</h2>
     <ul>
-      <li>Press plano con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones.</li>
-      <li>Press inclinado con mancuernas — 4 series (si está muy paila, 3). Mínimo 8 repeticiones. Menos peso que eso no.</li>
-      <li>Flexiones — 4 series de 10.</li>
-      <li>Press copa — 4 series de 12, no tan pesadas.</li>
-      <li>Polea para tríceps — 4 series de 12.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2017/08/07/20/50/dumbbell-2607129_1280.jpg" alt="Press plano">Press plano con mancuernas — 4 series de al menos 8 repeticiones.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/dumbbell-1283721_1280.jpg" alt="Press inclinado">Press inclinado con mancuernas — 4 series de al menos 8 repeticiones.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/athlete-1283720_1280.jpg" alt="Flexiones">Flexiones — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/gym-1283723_1280.jpg" alt="Press copa">Press copa — 4 series de 12, no tan pesadas.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2014/04/05/11/40/gym-316883_1280.jpg" alt="Polea triceps">Polea para tríceps — 4 series de 12.</li>
     </ul>
   </section>
 
   <section id="viernes">
     <h2>Viernes - Peso Muerto / Espalda / Bíceps</h2>
     <ul>
-      <li>Peso muerto — 4 series de 8.</li>
-      <li>Dominadas pronas — 4 series de 10.</li>
-      <li>Dominadas supinas — 4 series de 10.</li>
-      <li>Remo en polea — 4 series de 8.</li>
-      <li>Curl de bíceps — 5 series de 8.</li>
-      <li>Curl de bíceps martillo — 5 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/training-1283726_1280.jpg" alt="Peso muerto">Peso muerto — 4 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2020/03/04/19/54/pull-up-4903184_1280.jpg" alt="Dominadas pronas">Dominadas pronas — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2020/03/04/19/54/pull-up-4903184_1280.jpg" alt="Dominadas supinas">Dominadas supinas — 4 series de 10.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/muscular-1283722_1280.jpg" alt="Remo en polea">Remo en polea — 4 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/bodybuilder-1283725_1280.jpg" alt="Curl bíceps">Curl de bíceps — 5 series de 8.</li>
+      <li><img src="https://cdn.pixabay.com/photo/2016/03/27/19/58/athlete-1283724_1280.jpg" alt="Martillo bíceps">Curl de bíceps martillo — 5 series de 8.</li>
     </ul>
   </section>
 
@@ -188,7 +201,9 @@
 
   <script>
     function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      const section = document.getElementById(id);
+      const y = section.getBoundingClientRect().top + window.scrollY - 100; 
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   </script>
 </body>
